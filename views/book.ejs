@@ -1,0 +1,53 @@
+<%- include('header') %>
+
+<div class="px-5 py-5 my-5 card" style="border-radius: 0.5em;">
+    <h5 class="card-header">Book your transportation</h5>
+    <div class="card-body">
+        <form class="row g-3" method="post" action="/book">
+            <div class="col-12">
+                <label for="destAddress" class="form-label">Destination Address</label>
+                <textarea class="form-control" id="destAddress" name="destAddress"></textarea>
+            </div>
+            <div class="col-md-4">
+                <label for="destCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="destCity" name="destCity" />
+            </div>
+            <div class="col-md-4">
+                <label for="destState" class="form-label">State</label>
+                <input type="text" class="form-control" id="destState" name="destState" />
+            </div>
+            <div class="col-md-4">
+                <label for="destZip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="destZip" name="destZip" />
+            </div>
+            <div class="col-md-6">
+                <label for="pickuptime" class="form-label">Date and Time for Pick-up</label>
+                <input type="datetime-local" id="pickuptime" name="pickuptime" />
+            </div>
+            <div class="col-md-6">
+                <label for="loadwt" class="form-label">Weight of Load (kg)</label>
+                <input type="text" class="form-control" id="loadwt" name="loadwt" />
+            </div>
+            <div class="col-md-12">
+                <label for="inputType" class="form-label">Type of Load</label>
+                <select id="inputType" name="loadtype" class="form-select">
+                    <option selected>Choose...</option>
+                    <option value="farm">Farm Produce</option>
+                    <option value="construction">Construction Materials</option>
+                    <option value="cold">Cold Storage</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <input type="checkbox" value="auction" name="auction"/>
+                <label for="inputType" class="form-label">Post in Auction Board</label>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Book</button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+
+<% include('footer') %>
